@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+
+body {
+display: grid;
+grid-template-areas:
+"menu"
+"buscador"
+"contenido"
+"footer";
+grid-template-columns: 1fr;
+grid-template-rows: 100px 200px calc(100vh - 100px - 200px - 100px) 100px;
+}
+
+nav {
+grid-area: "menu";
+background-color: burlywood;
+}
+
+.search {
+grid-area: "buscador";
+background-color: cadetblue;
+}
+
+.dashboard {
+grid-area: "contenido";
+background-color: chocolate;
+}
+
+footer {
+grid-area: "footer";
+background-color: coral;
+}
+
+
+
+@media (min-width: 768px) {
+  body {
+    grid-template-areas:
+    "menu menu"
+    "buscador contenido"
+    "footer footer";
+    grid-template-columns: 100px calc(100vw - 200px);
+    grid-template-rows: 100px calc(100vh - 100px - 100px);
+  }
+}
+
+@media (min-width: 992px) {
+  
+}
